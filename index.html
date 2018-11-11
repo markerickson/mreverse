@@ -59,11 +59,10 @@
         show=-1;
 
     window.setInterval(function() {
-        if(children[show]) children[show].display='hidden';
-        show=show+1;
-        if(show==children.length) show=0;
-        children[show].display='block';
-        next=(next+1);
+        if(children[show]) children[show].display='hidden'; // hide current
+        show=show+1; // advance to next
+        if(show==children.length) show=0; // if past end of list, start over
+        children[show].display='block';  // show the next
     },4000);
 </script>
 </body>
