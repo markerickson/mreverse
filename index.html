@@ -20,13 +20,12 @@
 </head>
 <body>
   <p>offsets the memory palace…</p>
-
+  <a id='pict1' > 1</a><a id='pict2' > 2</a><a id='pict3' > 3</a>
   <ml-quad
   id="pictQuad0"
   src="images/pumpkin.png"
   extractable="true"
-  z-offset="200px"
-  y-offset="100px"
+  trigger="pict1"
 style="height: 100px;"
 >
 
@@ -34,6 +33,7 @@ style="height: 100px;"
 id="pictQuad1"
 src="images/pear.png"
 extractable="true"
+trigger="pict2"
 z-offset="50px"
 style="height: 100px;"
 >
@@ -42,7 +42,8 @@ style="height: 100px;"
 id="pictQuad2"
 src="images/statue.png"
 extractable="true"
-z-offset="-500px"
+trigger="pict3"
+z-offset="-200px"
 style="height: 100px;"
 >
 
