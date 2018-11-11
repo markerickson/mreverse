@@ -8,9 +8,10 @@
   <script src="https://unpkg.com/@magicleap/prismatic"></script>
   <style>
     .pictures {
-		height:200px;
+		height:350px;
 		position: fixed;
-		top: 30%;
+    visibility: hidden;
+		top: 20%;
 		left: 50%;
 		margin-top: -100px;
 		margin-left: -100px;
@@ -20,20 +21,18 @@
 <body>
   <p>the memory palace…</p>
 
-  <!-- <div id="memoryList">
-    <ml-quad id="pictPumpkin" src="images/pumpkin.png" extractable="true">
+    <ml-quad id="pictPumpkin" src="images/pumpkin.png" extractable="true" class="pictures">
     </ml-quad>
-    <ml-quad id="pictPear" src="images/pear.png" extractable="true" style="width: 25%; height: 25%; visibility: hidden;">
+    <ml-quad id="pictPear" src="images/pear.png" extractable="true" class="pictures">
     </ml-quad>
-    <ml-quad id="pictStatue" src="images/statue.png" extractable="true" style="width: 100px; height: 90px;">
+    <ml-quad id="pictStatue" src="images/statue.png" extractable="true" class="pictures">
     </ml-quad>
-  </div> -->
-  <div id="memoryList">
-<div id='pict' class="pictures" style="visibility:hidden;"><img id="pict0" src="images/pear.png" extractable="true" style="width: 300px; float: "/></div> 
-<div id='pict' class="pictures" style="visibility:hidden;"><img id="pict1" src="images/pumpkin.png" extractable="true" style="width: 300px;"/></div>
-<div id='pict' class="pictures" style="visibility:hidden;"><img id="pict2" src="images/pear.png" extractable="true" style="width: 300px;"></div>
-<div id='pict' class="pictures" style="visibility:hidden;"><img id="pict3" src="images/statue.png" extractable="true" style="width: 300px;"></div>
-  </div>
+
+    <!-- <img id="pict0" src="images/pear.png" extractable="true" class="pictures" />
+    <img id="pict1" src="images/pumpkin.png" extractable="true" class="pictures" />
+    <img id="pict2" src="images/pear.png" extractable="true"  class="pictures" >
+    <img id="pict3" src="images/statue.png" extractable="true"  class="pictures" > -->
+
     
   <!-- <ml-model
       id="earth"
