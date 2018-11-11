@@ -4,11 +4,20 @@
   <style>
     body { background-color: rgba(0, 0, 0, 0); }
   </style>
-  <title>Hello, Prismatic!</title>
+  <title>Memory Palace</title>
   <script src="https://unpkg.com/@magicleap/prismatic"></script>
 </head>
 <body>
-  <p>Earth</p>
+  <p>the memory palace…</p>
+  
+  <ml-quad
+  id="pictQuad"
+  src="images/pumpkin.jpg"
+  extractable="true"
+  extracted-scale="2"
+  z-offset="300">
+</ml-quad>
+
   <ml-model
       id="earth"
       src="earth.fbx"
