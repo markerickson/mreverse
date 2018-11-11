@@ -6,85 +6,22 @@
   </style>
   <title>Memory Palace</title>
   <script src="https://unpkg.com/@magicleap/prismatic"></script>
-  <style>
-    .pictures {
-		height:350px;
-		/* position: fixed;
-    visibility: hidden;
-		top: 20%;
-		left: 50%;
-		margin-top: -100px;
-		margin-left: -100px; */
-    } 
-    </style>
 </head>
 <body>
   <p style="color: aqua">the memory palace…</p>
-  <a id='pict1' class= > a place</a> - <a id='pict2' > person </a> - <a id='pict3' > event </a>
-
   <ml-quad
-  id="pictQuad0"
-  src="images/pumpkin.png"
+  id="pictPear"
+  src="images/pear.png"
   extractable="true"
-  extracted-scale="2"
-  z-offset="-100"
-></ml-quad>
-
-<ml-quad
-id="pictQuad"
-src="images/statue.png"
-extractable="true"
-extracted-scale="2"
-z-offset="-300px">
-</ml-quad>
-
-
-    <!-- <img id="pict0" src="images/pear.png" extractable="true" class="pictures" />
-    <img id="pict1" src="images/pumpkin.png" extractable="true" class="pictures" />
-    <img id="pict2" src="images/pear.png" extractable="true"  class="pictures" >
-    <img id="pict3" src="images/statue.png" extractable="true"  class="pictures" > -->
-
-    
-  <!-- <ml-model
-      id="earth"
-      src="earth.fbx"
-      style="width: 300px; height: 300px;"
-      z-offset="-500px"
-      unbounded="true"
-      extractable="true"
-      rotate-by-angles="
-            angles: 0 -5 0;
-            duration: 30s;
-            track: 1;">
-  </ml-model>
-
-  <ml-model
-      id="balloon"
-      src="balloon.fbx"
-      style="width: 2000px; height: 1000px;"
-      model-scale="0.1 0.1 0.1"
-      z-offset="300px"
-      unbounded="true"
-      prism-rotation="0 0 0.25"
-      move-by="axes: -1200px 400px -400px; 
-        duration: 20s; 
-        track: 1;"
-      rotate-by-angles="
-        angles: 0 0 -0.5;
-        duration: 15s;
-        track: 2;">
-  </ml-model> -->
-  <!-- <script>
-    var pictList = document.getElementsByTagName('ml-quad');
-    var show=-1;
-
-    window.setInterval(function() {
-      console.log("interval triggered");
-        if(pictList[show]) pictList[show].style.visibility='hidden'; // hide current
-        show=show+1; // advance to next
-        if(show>=pictList.length) show=0; // if past end of list, start over
-        pictList[show].style.visibility='visible';  // show the next
-    },10000);
-</script> -->
+  style="width: 100px; height: 90px;"
+  >
+  </ml-quad>
+  <ml-quad
+  id="pictStatue"
+  src="images/statue.png"
+  extractable="true"
+  style="width: 100px; height: 90px;"
+  >
+ 
 </body>
 </html>
