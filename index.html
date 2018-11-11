@@ -6,35 +6,26 @@
   </style>
   <title>Memory Palace</title>
   <script src="https://unpkg.com/@magicleap/prismatic"></script>
+
 </head>
 <body>
   <p>the memory palace…</p>
 
-
-
-  <ml-quad
-    id="pictPumpkin"
-    src="images/pumpkin.png"
-    extractable="true"
-  >
-</ml-quad>
-<ml-quad
-id="pictPear"
-src="images/pear.png"
-extractable="true"
-style="width: 25%; height: 25%; visibility: hidden;"
->
-</ml-quad>
-<ml-quad
-id="pictStatue"
-src="images/statue.png"
-extractable="true"
-style="width: 100px; height: 90px;"
->
-</ml-quad>
-
-
-  <ml-model
+  <!-- <div id="memoryList">
+    <ml-quad id="pictPumpkin" src="images/pumpkin.png" extractable="true">
+    </ml-quad>
+    <ml-quad id="pictPear" src="images/pear.png" extractable="true" style="width: 25%; height: 25%; visibility: hidden;">
+    </ml-quad>
+    <ml-quad id="pictStatue" src="images/statue.png" extractable="true" style="width: 100px; height: 90px;">
+    </ml-quad>
+  </div> -->
+  <div id="memoryList">
+    <img id="pictPumpkin" src="images/pumpkin.png" extractable="true">
+    <img id="pictPear" src="images/pear.png" extractable="true" style="width: 25%; height: 25%; visibility: hidden;">
+    <img id="pictStatue" src="images/statue.png" extractable="true" style="width: 100px; height: 90px;">
+  </div>
+    
+  <!-- <ml-model
       id="earth"
       src="earth.fbx"
       style="width: 300px; height: 300px;"
@@ -61,6 +52,19 @@ style="width: 100px; height: 90px;"
         angles: 0 0 -0.5;
         duration: 15s;
         track: 2;">
-  </ml-model>
+  </ml-model> -->
+  <script>
+    var container = document.getElementById("memoryList"),
+        children = container.childNodes,
+        show=-1;
+
+    window.setInterval(function() {
+        if(children[show]) children[show].display='hidden';
+        show=show+1;
+        if(show==children.length) show=0;
+        children[show].display='block';
+        next=(next+1);
+    },4000);
+</script>
 </body>
 </html>
