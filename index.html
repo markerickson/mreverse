@@ -6,7 +6,12 @@
   </style>
   <title>Memory Palace</title>
   <script src="https://unpkg.com/@magicleap/prismatic"></script>
-
+  <style>
+    .pictures {
+        margin: 20px;
+        padding: 20px;
+    } 
+    </style>
 </head>
 <body>
   <p>the memory palace…</p>
@@ -20,10 +25,10 @@
     </ml-quad>
   </div> -->
   <div id="memoryList">
-<div id='pict' style="visibility:hidden;"> <img id="pict0" src="images/pear.png" extractable="true" style="width: 300px;"/></div> 
-<div id='pict' style="visibility:hidden;">    <img id="pict1" src="images/pumpkin.png" extractable="true" style="width: 300px;"/></div>
-<div id='pict' style="visibility:hidden;"><img id="pict2" src="images/pear.png" extractable="true" style="width: 300px;"></div>
-<div id='pict' style="visibility:hidden;"><img id="pict3" src="images/statue.png" extractable="true" style="width: 300px;"></div>
+<div id='pict' class="pictures" style="visibility:hidden;"><img id="pict0" src="images/pear.png" extractable="true" style="width: 300px;"/></div> 
+<div id='pict' class="pictures" style="visibility:hidden;"><img id="pict1" src="images/pumpkin.png" extractable="true" style="width: 300px;"/></div>
+<div id='pict' class="pictures" style="visibility:hidden;"><img id="pict2" src="images/pear.png" extractable="true" style="width: 300px;"></div>
+<div id='pict' class="pictures" style="visibility:hidden;"><img id="pict3" src="images/statue.png" extractable="true" style="width: 300px;"></div>
   </div>
     
   <!-- <ml-model
@@ -55,16 +60,15 @@
         track: 2;">
   </ml-model> -->
   <script>
-    var container = document.getElementsByName("pict"),
-        children = container.childNodes,
+    var pictList = document.getElementsByName("pict"),
         show=-1;
 
     window.setInterval(function() {
       console.log("interval triggered");
-        if(children['pict' + show]) children[show].style.visibility='hidden'; // hide current
+        if(pictList['pict' + show]) pictList[show].style.visibility='hidden'; // hide current
         show=show+1; // advance to next
-        if(show>=children.length) show=0; // if past end of list, start over
-        children[show].style.visibility='visible';  // show the next
+        if(show>=pictList.length) show=0; // if past end of list, start over
+        pictList[show].style.visibility='visible';  // show the next
     },1000);
 </script>
 </body>
