@@ -19,13 +19,12 @@
     </style>
 </head>
 <body>
-  <p>offsets the memory palace…</p>
+  <p>visibility the memory palace…</p>
   <a id='pict1' class= > a place</a> - <a id='pict2' > person </a> - <a id='pict3' > event </a>
   <ml-quad
   id="pictQuad0"
   src="images/pumpkin.png"
   extractable="true"
-  trigger="pict1"
 style="height: 100px;"
 >
 
@@ -33,7 +32,6 @@ style="height: 100px;"
 id="pictQuad1"
 src="images/pear.png"
 extractable="true"
-trigger="pict2"
 style="height: 100px;"
 >
 
@@ -41,7 +39,6 @@ style="height: 100px;"
 id="pictQuad2"
 src="images/statue.png"
 extractable="true"
-trigger="pict3"
 style="height: 100px;"
 >
 
@@ -79,8 +76,8 @@ style="height: 100px;"
         duration: 15s;
         track: 2;">
   </ml-model> -->
-  <!-- <script>
-    var pictList = document.getElementsByClassName('pictures');
+  <script>
+    var pictList = document.getElementsByTagName('ml-quad');
     var show=-1;
 
     window.setInterval(function() {
@@ -90,6 +87,6 @@ style="height: 100px;"
         if(show>=pictList.length) show=0; // if past end of list, start over
         pictList[show].style.visibility='visible';  // show the next
     },10000);
-</script> -->
+</script>
 </body>
 </html>
