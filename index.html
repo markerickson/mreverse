@@ -65,7 +65,7 @@
 
     window.setInterval(function() {
       console.log("interval triggered");
-        if(pictList['pict' + show]) pictList[show].style.visibility='hidden'; // hide current
+        if(pictList[show]) pictList[show].style.visibility='hidden'; // hide current
         show=show+1; // advance to next
         if(show>=pictList.length) show=0; // if past end of list, start over
         pictList[show].style.visibility='visible';  // show the next
