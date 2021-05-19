@@ -1,2 +1,2 @@
 # mreverse
-memory verse - XR Memory Palaoce
+memory verse - XR Memory Palace
